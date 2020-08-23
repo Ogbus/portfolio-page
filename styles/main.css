@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+/* Styling navbar */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(0, 230, 138);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.topnav .left-nav {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.topnav .right-nav {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.topnav a.active {
+    background-color: #ddd;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Making the navbar responsive */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav .left-nav {
+        padding: 16px 18px;
+    }
+
+    .topnav .right-nav {
+        padding: 16px 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+/* Styling the main element contents */
+main {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+}
+
+main figure {
+    padding-top: 30px;
+    /* margin-top: 30px; */
+}
+
+#profile-image {
+    margin-top: 75px;
+}
+
+main figure img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+
+main .profile-intro {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    main .profile-intro p {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: justify;
+    }
+
+    main figure img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    main .profile-intro p {
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    main .profile-intro p {
+        padding-left: 200px;
+        padding-right: 200px;
+        text-align: justify;
+    }
+}
+
+/* Styling project page */
+main .portfolio-content {
+    background: url('../images/workdesk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+article {
+    flex: 200px;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    main .portfolio-content {
+        height: 850px;
+    }
+    article {
+        flex: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    main .portfolio-content {
+        height: 750px;
+    }
+
+    main figure {
+        padding-top: 15px;
+    }
+    main figure img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    main .portfolio-content {
+        height: 500px;
+    }
+    main figure {
+        padding-top: 30px;
+    }
+    main figure img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* .portfolio-content p {
+    padding: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+} */
+
+/* Styling contact page */
+.contact {
+    padding-bottom: 30px;
+}
+
+.contact #contact-header {
+    padding-top: 15px;
+}
+
+#contact-header h2 {
+    word-spacing: 10px;
+    letter-spacing: 6px;
+}
+
+#contact-header p {
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    padding-top: 10pxs;
+}
+
+.contact .contact-details {
+    display: inline-block;
+    font-weight: bold;
+    margin: 40px 35px 45px 35px;
+    list-style-type: none;
+    border: 2px solid #90C695;
+    border-radius: 30%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: #008080;
+    text-decoration: none;
+}
+
+.contact-details:hover {
+    background: #E4F1FE;
+    color: green;
+}
+
+/* Styling footer */
+footer {
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 20px 0;
+}
